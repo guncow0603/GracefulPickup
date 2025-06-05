@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>우아한수거 - 수거 품목 안내</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: #111 url('/images/truck.png') no-repeat center center / cover;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #fff;
+            padding-top: 80px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .subtitle {
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+
+        .info-title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-text {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .info-text strong {
+            color: #111;
+        }
+
+        ul.info-list {
+            list-style: inside;
+            color: #666;
+            font-size: 1rem;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        ul.info-list li {
+            margin-bottom: 0.6rem;
+        }
+
+        @media (max-width: 767px) {
+            .info-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header"></header>
+
+<div class="container py-5 pb-2"> <!-- 기존 py-5 → py-5 pb-2 로 변경 -->
+    <h1 data-aos="fade-up" style="color: #fff;">수거 품목 안내</h1>
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+        우아한 수거는 어떤 폐기물이든 처리할 수 있습니다.<br />
+        가전에서 발생하는 다양한 폐기물을 수거, 처리합니다.
+    </p>
+
+    <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6 col-lg-5 mx-auto">
+            <div class="info-card">
+                <div class="icon">✅</div>
+                <div class="info-title">수거 가능 품목</div>
+                <p class="info-text">
+                    고객이 원하는 폐기물 모두 수거 가능합니다.<br />
+                    <strong>※ 단, 법으로 지정된 폐기물은 제외</strong>
+                </p>
+                <ul class="info-list">
+                    <li>대형가구, 가전제품 – 상담 필요</li>
+                    <li>생활·사업장 폐기물 전반</li>
+                    <li>가전에서 발생하는 다양한 폐기물 수거 가능</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-5 mx-auto">
+            <div class="info-card">
+                <div class="icon">⚠️</div>
+                <div class="info-title">수거 불가 품목</div>
+                <p class="info-text mb-0">
+                    법적으로 수거가 금지된 지정 폐기물은 수거가 불가합니다.
+                </p>
+                <ul class="info-list mt-2">
+                    <li>소화기</li>
+                    <li>페인트</li>
+                    <li>가솔린 및 유류</li>
+                    <li>의료폐기물 등</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/header.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+</script>
+</body>
+</html>

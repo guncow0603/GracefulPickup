@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>우아한수거 - 이용 요금</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- head 태그 안쪽에 추가 -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #111 url('/images/truck.png') no-repeat center center / cover;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #fff;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .price-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            color: #222;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+        }
+
+        .price-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+
+        .price-desc {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .note {
+            background: rgba(255,255,255,0.95);
+            border-left: 6px solid #0d6efd;
+            padding: 1.25rem;
+            border-radius: 12px;
+            font-weight: 500;
+            color: #333;
+            margin-top: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header id="header"></header>
+
+<div class="container py-5">
+    <h1 class="fw-bold display-5 text-center mb-5" data-aos="fade-up" style="color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+        이용 요금 안내
+    </h1>
+
+    <!-- 1회성 이용권 -->
+    <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4">
+            <div class="price-card">
+                <div class="price-title">1회 이용권</div>
+                <div class="price-value">39,000원</div>
+                <div class="price-desc">단순 방문 수거</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="price-card">
+                <div class="price-title">2회 이용권</div>
+                <div class="price-value">69,000원</div>
+                <div class="price-desc">단순 방문 수거</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="price-card">
+                <div class="price-title">3회 이용권</div>
+                <div class="price-value">99,000원</div>
+                <div class="price-desc">단순 방문 수거</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 정기 이용권 -->
+    <div class="row g-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6">
+            <div class="price-card">
+                <div class="price-title">정기권 - 1개월</div>
+                <div class="price-value">159,000원</div>
+                <div class="price-desc">주 1회 × 4주<br>고객 지정 요일 정기 수거</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="price-card">
+                <div class="price-title">정기권 - 3개월</div>
+                <div class="price-value">459,000원</div>
+                <div class="price-desc">주 1회 × 12주<br>유연한 일정 조정 가능</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 안내문 -->
+    <div class="note mt-5" data-aos="fade-up" data-aos-delay="300">
+        ✓ 정기권은 고객이 원하는 요일에 주 1회 방문 가능합니다.<br />
+        ✓ 방문 시간대나 요일은 상담을 통해 조정할 수 있습니다.<br />
+        ✓ 주 2회 이상 수거를 원할 경우 개별 상담을 통해 맞춤형 플랜을 안내드립니다.
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/header.js"></script>
+<!-- body 태그 끝 부분에 추가 -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+</script>
+</body>
+</html>
